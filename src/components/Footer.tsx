@@ -61,7 +61,7 @@ export const Footer = () => {
           className="text-[20vw] md:text-[18vw] lg:text-[16vw] font-black text-transparent opacity-5"
           style={{
             WebkitTextStroke: '2px rgba(255, 255, 255, 0.1)',
-            color: 'transparent',
+            textStroke: '2px rgba(255, 255, 255, 0.1)',
           }}
         >
           {/* [PLACEHOLDER] Replace with your brand name */}

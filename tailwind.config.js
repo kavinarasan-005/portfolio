@@ -7,22 +7,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Dark glass aesthetic color palette
+        // ChronicleHQ-inspired dark glass palette
+        // Backgrounds
         'bg-primary': '#000000',
-        'bg-secondary': '#0a0a0a',
-        'bg-tertiary': '#0f0f0f',
-        'bg-card': 'rgba(15, 15, 15, 0.8)',
-        'glass-border': 'rgba(255, 255, 255, 0.1)',
-        'glass-glow': 'rgba(255, 255, 255, 0.05)',
+        'bg-secondary': '#050505',
+        'bg-tertiary': '#0a0a0a',
+        'bg-card': 'rgba(10, 10, 10, 0.7)',
+        'glass-border': 'rgba(255, 255, 255, 0.08)',
+        'glass-glow': 'rgba(255, 255, 255, 0.03)',
+        
+        // Text
         'text-primary': '#ffffff',
-        'text-secondary': '#a0a0a0',
-        'text-muted': '#666666',
-        'accent-blue': '#00d9ff',
-        'accent-pink': '#ff006e',
-        'accent-purple': '#bb00ff',
-        'glow-blue': 'rgba(0, 217, 255, 0.3)',
-        'glow-pink': 'rgba(255, 0, 110, 0.3)',
-        'glow-purple': 'rgba(187, 0, 255, 0.3)',
+        'text-secondary': '#9ca3af',
+        'text-muted': '#6b7280',
+        
+        // Accent colors matching ChronicleHQ
+        'accent-blue': '#06b6d4',
+        'accent-cyan': '#22d3ee',
+        'accent-purple': '#a78bfa',
+        
+        // Gradient stops
+        'gradient-from': '#06b6d4',
+        'gradient-via': '#a78bfa',
+        'gradient-to': '#ec4899',
+        
+        // Glow effects
+        'glow-blue': 'rgba(6, 182, 212, 0.4)',
+        'glow-cyan': 'rgba(34, 211, 238, 0.4)',
+        'glow-purple': 'rgba(167, 139, 250, 0.4)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
@@ -90,7 +102,10 @@ export default {
       },
       backgroundImage: {
         'radial-gradient': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
-        'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+        'glass-gradient': 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+        'radial-blue': 'radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%)',
+        'radial-purple': 'radial-gradient(circle, rgba(167, 139, 250, 0.12) 0%, transparent 70%)',
+        'gradient-chronicle': 'linear-gradient(135deg, #06b6d4 0%, #a78bfa 50%, #ec4899 100%)',
       },
     },
   },

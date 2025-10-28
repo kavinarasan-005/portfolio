@@ -10,7 +10,7 @@
  * Animation sequence: h1 → p → buttons → media frame
  */
 
-import { motion } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import { useParallax } from '../hooks/useParallax';
 import { useReducedMotion } from '../hooks/useReducedMotion';
@@ -22,8 +22,8 @@ export const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
   
   // Transform parallax values for secondary gradient
-  // Note: These will be motion values that we can't useTransform easily without proper typing
-  const parallaxStyle = shouldReduceMotion ? {} : { x, y };
+  const xReverse = useTransform(x, (value) => value * -0.5);
+  const yReverse = useTransform(y, (value) => value * -0.5);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -32,13 +32,27 @@ export const Hero = () => {
         {/* Main radial gradient */}
         <motion.div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] bg-radial-blue opacity-40"
-          style={parallaxStyle}
+          style={
+            shouldReduceMotion
+              ? {}
+              : {
+                  x,
+                  y,
+                }
+          }
         />
         
         {/* Secondary gradient */}
         <motion.div
           className="absolute top-1/4 right-0 w-[1000px] h-[1000px] bg-radial-purple opacity-30"
-          style={parallaxStyle}
+          style={
+            shouldReduceMotion
+              ? {}
+              : {
+                  x: xReverse,
+                  y: yReverse,
+                }
+          }
         />
 
         {/* Vignette overlay */}

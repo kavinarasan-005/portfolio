@@ -6,9 +6,10 @@
  */
 
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { HeroChronicle } from './components/HeroChronicle';
 import { TrustMarquee } from './components/TrustMarquee';
 import { FeatureGrid } from './components/FeatureGrid';
+import { ContentSection } from './components/ContentSection';
 import { Footer } from './components/Footer';
 import './styles/globals.css';
 
@@ -21,7 +22,7 @@ function App() {
       {/* Main Content */}
       <main id="main-content">
         {/* Hero Section */}
-        <Hero />
+        <HeroChronicle />
 
         {/* Trust Logos */}
         <TrustMarquee />
@@ -29,63 +30,25 @@ function App() {
         {/* Features Grid */}
         <FeatureGrid />
 
-        {/* Content Section Example - "Start with your raw thoughts" */}
-        <section className="section-container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-display-sm md:text-display-md font-bold text-text-primary mb-6">
-                Start with your{' '}
-                <span className="gradient-text">raw thoughts</span>
-              </h2>
-              <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                No templates, no structure needed. Just brain-dump everything
-                that's in your head. Chronicle helps you organize it later.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  'Voice notes automatically transcribed',
-                  'Quick capture from any device',
-                  'AI-powered organization',
-                ].map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent-blue/20 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-text-secondary">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="glass-card p-8 aspect-square flex items-center justify-center">
-              {/* [PLACEHOLDER] Add illustration or animated panel */}
-              <div className="text-text-muted">Content Preview</div>
-            </div>
-          </div>
-        </section>
+        {/* Content Section - "Start with your raw thoughts" */}
+        <ContentSection
+          heading="Start with your raw thoughts and ideas."
+          paragraph="Choose a template, paste in a rough outline, or import existing content."
+          bullets={[
+            'Voice notes automatically transcribed',
+            'Quick capture from any device',
+            'AI-powered organization',
+          ]}
+          reverse={false}
+        />
 
-        {/* Video Section - "Watch Chronicle bring your story to life" */}
-        <section className="section-container text-center">
-          <h2 className="text-display-sm md:text-display-md font-bold text-text-primary mb-6">
-            Watch Chronicle bring your{' '}
-            <span className="gradient-text">story to life</span>
-          </h2>
-          <p className="text-lg text-text-secondary mb-12 max-w-3xl mx-auto">
-            See how Chronicle transforms scattered thoughts into beautiful,
-            structured narratives with just one click.
-          </p>
-          <div className="glass-card p-4 max-w-4xl mx-auto">
-            <div className="aspect-video rounded-xl bg-bg-secondary flex items-center justify-center group cursor-pointer hover:bg-bg-tertiary transition-colors">
-              {/* [PLACEHOLDER] Replace with actual video */}
-              <div className="w-20 h-20 rounded-full glass-card flex items-center justify-center group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-accent-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Content Section - "Watch Chronicle bring your story to life" */}
+        <ContentSection
+          heading="Watch Chronicle bring your story to life."
+          paragraph="Generate a well crafted presentation, with beautiful layouts that you can refine, share and present."
+          bullets={[]}
+          reverse={true}
+        />
 
         {/* Testimonials Placeholder */}
         <section className="section-container">

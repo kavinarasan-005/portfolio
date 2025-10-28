@@ -181,7 +181,7 @@ export const HeroChronicle = () => {
             role="list"
             aria-label="Template types"
           >
-            {templateTypes.map((template, index) => (
+            {templateTypes.map((template) => (
               <button
                 key={template}
                 className="flex-shrink-0 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-sm text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black"

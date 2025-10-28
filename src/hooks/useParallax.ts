@@ -13,7 +13,7 @@
  * <div style={{ transform: `translate(${x}px, ${y}px)` }}>
  */
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useMotionValue, useSpring } from 'framer-motion';
 import { useReducedMotion } from './useReducedMotion';
 
@@ -36,7 +36,6 @@ export const useParallax = ({
   const springX = useSpring(x, { stiffness: 100, damping: 20 });
   const springY = useSpring(y, { stiffness: 100, damping: 20 });
   const shouldReduceMotion = useReducedMotion();
-  const requestRef = useRef<number>();
 
   useEffect(() => {
     // Disable parallax if user prefers reduced motion

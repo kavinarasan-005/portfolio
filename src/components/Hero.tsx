@@ -109,7 +109,7 @@ export const Hero = () => {
           {/* Primary CTA */}
           <a
             href="#signup"
-            className="group px-8 py-4 rounded-xl bg-gradient-to-r from-accent-blue to-accent-purple text-white font-semibold shadow-glow-blue hover:shadow-glow-purple transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
+            className="group px-8 py-4 rounded-xl bg-gradient-chronicle text-white font-semibold shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
           >
             Get Started Free
             <ArrowRight
